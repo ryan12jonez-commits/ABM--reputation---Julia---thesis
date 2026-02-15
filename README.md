@@ -105,10 +105,3 @@ That’s the point where “minimum r” becomes meaningful.
 
 ---
 
-## Running the code
-
-From Julia REPL:
-
-```julia
-cd(raw"C:\path\to\folder")
-include("simple_voting_model_complete.jl")
