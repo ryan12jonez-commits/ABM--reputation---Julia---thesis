@@ -4,6 +4,8 @@ This repo contains a deliberately simple agent-based model that follows the flow
 
 **Random initialize population → Vote → Evaluate reputation → Update state (Fermi) → Loop** - closest to diagram 
 
+THIS WILL NOT SHOW ANY RESULTS THAT ARE WORTHWHILE MAINLY SCAFFOLDING (MINIMAL STRUCTURE) THAT CAN BE EXTENDED _ MAIN POINT OF MODEL WAS TO FOLLOW DIAGRAM BEST OF ABILITY)
+
 Model a clean, working loop that runs at large N (50,000), uses local (network) interactions, and uses the standard Fermi imitation rule. Once this baseline is stable, I can add truth (for discussion- discussion point at the bottom - perhaps peer), signal accuracy, costs, and strategy types without rebuilding everything.
 
 ## What the model does
@@ -47,7 +49,6 @@ Right now the default is an Erdős–Rényi random graph with expected degree `k
 
 Later I’ll swap the graph generator to small-world (source at the bottom) / scale-free to test how clustering and hubs change outcomes - or perhaps .
 
-
 ## Outputs (what I plot/save)
 
 The script records:
@@ -58,17 +59,12 @@ The script records:
 
 These outputs are mainly a sanity check, the model runs, parameters/topology matter in the expected direction, and the loop behaves predictably.
 
-## How this connects to the real research question (next step)
+##discussion points 
 
-The minimal extension to get closer to the real question is:
+That’s the point where “minimum r” becomes meaningful - what we trying to find out 
 
-- add agent type `Scout` vs `Sprinter`,
-- add a binary “truth” state each period,
-- give scouts higher signal accuracy but charge them a cost \(c\),
-- update reputation based on verified correctness (not agreement),
-- define payoff \(\pi_i = r \cdot reputation_i - c \cdot 1\{Scout\}\),
-- run Fermi copying over strategy type (Scout/Sprinter) while holding \(\beta\) fixed and sweeping \(r\).
+Small-world (Watts-Strogatz) - Network 
 
-That’s the point where “minimum r” becomes meaningful.
+
 
 
